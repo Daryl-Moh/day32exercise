@@ -1,0 +1,42 @@
+<h2> Cart </h2>
+
+<form [formGroup]="cartForm" (ngSubmit)="processForm()">
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td>
+                <input type="text" formControlName="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td>
+                <input type="text" formControlName="address">
+            </td>
+        </tr>
+        <tr>
+            <td>Delivery: </td>
+            <td>
+                <input type="checkbox" formControlName="delivery">AM
+                <input type="checkbox" formControlName="delivery">PM
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">
+                    Checkout
+                </button>
+            </td>    
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <span class="text">
+
+                {{ selection }}
+
+            </span>
+        </tr>
+    </table>
+</form>
